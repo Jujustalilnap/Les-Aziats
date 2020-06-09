@@ -20,6 +20,8 @@ public class Voyage extends AbstractVoyage {
     public Voyage(ArrayList<Planete> listPlanete, AbstractVoyageur simulatedVoyageur) {
         super(listPlanete, simulatedVoyageur);
         // TODO Auto-generated constructor stub
+        
+        
     }
 
     /**
@@ -38,6 +40,8 @@ public class Voyage extends AbstractVoyage {
     @Override
     public int showFromPlanete(Planete p) {
         // TODO Auto-generated method stub
+    	Screen ecran = setImage(Planete.image);
+    	
         return 0;
     }
 
@@ -47,6 +51,8 @@ public class Voyage extends AbstractVoyage {
     @Override
     public int showAll() {
         // TODO Auto-generated method stub
+    	
+    	
         return 0;
     }
 
