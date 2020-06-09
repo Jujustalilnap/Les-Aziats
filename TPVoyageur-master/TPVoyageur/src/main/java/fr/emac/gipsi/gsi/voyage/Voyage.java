@@ -3,6 +3,9 @@
  */
 package fr.emac.gipsi.gsi.voyage;
 
+import fr.emac.gipsi.gsi.animation.AbstractAnimation;
+import fr.emac.gipsi.gsi.animation.AnimationFlash;
+import fr.emac.gipsi.gsi.ecran.ListScreen;
 import fr.emac.gipsi.gsi.voyageur.AbstractVoyageur;
 
 import java.util.ArrayList;
@@ -40,8 +43,16 @@ public class Voyage extends AbstractVoyage {
     @Override
     public int showFromPlanete(Planete p) {
         // TODO Auto-generated method stub
-    	Screen ecran = setImage(Planete.image);
-    	
+    	AbstractAnimation aa = new AnimationFlash();
+    	Screen p_image = setImage(p.image);
+    	Screen rochep_image = setImage(p.echantillonRoche);
+    	Screen  solp_image = setImage(p.echantillonSol);
+    	aa.setEcranDeb(planete_image);
+		aa.setEcranFin(ecran);
+		
+		aa.runAnimation();
+
+		aa.wait(1000);
         return 0;
     }
 
