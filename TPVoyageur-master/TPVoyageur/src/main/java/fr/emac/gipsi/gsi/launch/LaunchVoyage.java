@@ -20,13 +20,13 @@ public class LaunchVoyage {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) {     //fonction où l'on doit appliquer le programme pour faire des tests
 		// TODO Auto-generated method stub
 
 		
 		ArrayList<Planete> listPlanete = new ArrayList<>();
 		
-		Planete p1 = new Planete();
+		Planete p1 = new Planete();  //p1 donne p2 et p2 donne p1
 		p1.setColorName("DarkSalmon");
 		p1.setImage(ListScreen.first());
 		p1.setEchantillonRoche(ListScreen.second());
@@ -56,7 +56,7 @@ public class LaunchVoyage {
 		simulatedVoyageur.getPosTete().setX(listPlanete.get(0).getPos().getX());
 		simulatedVoyageur.getPosTete().setY(listPlanete.get(0).getPos().getY());
 		simulatedVoyageur.getPosBody().setX(listPlanete.get(0).getPos().getX());
-		simulatedVoyageur.getPosBody().setY(listPlanete.get(0).getPos().getY()-1);
+		simulatedVoyageur.getPosBody().setY(listPlanete.get(0).getPos().getY()-1); //(-1 veut dire qu'il regarde vers la gauche
 		simulatedVoyageur.setDirection("E");
 		
 		Voyage voyage = new Voyage(listPlanete, simulatedVoyageur);

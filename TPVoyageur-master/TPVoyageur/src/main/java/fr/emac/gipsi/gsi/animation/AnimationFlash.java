@@ -2,7 +2,7 @@
  * 
  */
 package fr.emac.gipsi.gsi.animation;
-
+//Permet de remplacer une image par une autre
 import fr.emac.gipsi.gsi.screen.Screen;
 
 /**

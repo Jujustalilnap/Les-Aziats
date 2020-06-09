@@ -1,7 +1,8 @@
-/**
+/**/
  *
  */
 package fr.emac.gipsi.gsi.voyageur;
+//On peut défnir une méthode qui est décrit par ses paramètres mais son action n'est pas explicite
 
 import fr.emac.gipsi.gsi.screen.Screen;
 import fr.emac.gipsi.gsi.voyage.Planete;
@@ -76,11 +77,11 @@ public abstract class AbstractVoyageur {
     }
 
 
-    protected abstract void forward();
+    protected abstract void forward(); //augmenter de 1 la direction dans laquelle ragarde le robot
 
-    protected abstract void backward();
+    protected abstract void backward(); //idem que forward sauf on diminue
 
-    protected abstract void left();
+    protected abstract void left(); //on tourne la direction vers la gauche tout en maintenant la même direction de regard
 
     protected abstract void right();
 

@@ -20,8 +20,8 @@ public class Planete {
 	private Screen echantillonSol;
 	
 	private Position pos = new Position(0, 0);
-	private int rayon=1;
-	private String colorName="Aqua";
+	private int rayon=1; //nombre de case qu'occupe la planète sous la forme d'un carré
+	private String colorName="Aqua"; //
 	
 	/**
 	 * 
@@ -35,7 +35,7 @@ public class Planete {
 	/**
 	 * @return the listVisibilite
 	 */
-	public ArrayList<Planete> getListVisibilite() {
+	public ArrayList<Planete> getListVisibilite() { //récupérer la listvisibilité sur laquelle on est
 		return listVisibilite;
 	}
 
@@ -147,7 +147,7 @@ public class Planete {
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
-	public String toString() {
+	public String toString() { //on veut afficher la planète sous forme d'une chaine de caractère
 		return "Planete [" + (pos != null ? "\npos=" + pos + ", " : "")
 				+ (colorName != null ? "colorName=" + colorName : "") + "]";
 	}

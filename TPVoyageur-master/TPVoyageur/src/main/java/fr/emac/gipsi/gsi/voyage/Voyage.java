@@ -54,7 +54,7 @@ public class Voyage extends AbstractVoyage {
      * @see fr.emac.gipsi.gsi.voyage.AbstractVoyage#pilotage()
      */
     @Override
-    public void lancement() {
+    public void lancement() { //pour lancer le robot
         // TODO Auto-generated method stub
 
     }
