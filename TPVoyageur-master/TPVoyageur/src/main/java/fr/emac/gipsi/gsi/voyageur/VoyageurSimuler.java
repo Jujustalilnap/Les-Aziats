@@ -103,12 +103,12 @@ public class VoyageurSimuler extends AbstractVoyageur {
         // TODO Auto-generated method stub
     	String direction = getDirection();
     	if (direction == "o") { //direction du robot ouest
-    		getPosTete().setX(getPosTete().getX()+1);
+    		getPosTete().setX(getPosTete().getX()-1);
     		getPosTete().setY(getPosTete().getY()+1);
     	}
 
     	else if (direction == "e") { //direction du robot est
-    			getPosTete().setX(getPosTete().getX()-1);
+    			getPosTete().setX(getPosTete().getX()+1);
         		getPosTete().setY(getPosTete().getY()-1);
         }
     	else if (direction == "n") {  //direction nord
@@ -116,7 +116,7 @@ public class VoyageurSimuler extends AbstractVoyageur {
     		getPosTete().setY(getPosTete().getY()-1);
     	}
     	else {
-    		getPosTete().setY(getPosTete().getY()+1); //sinon direction sud
+    		getPosTete().setY(getPosTete().getY()-1); //sinon direction sud
     		getPosTete().setX(getPosTete().getX()-1);
     	}
 }
