@@ -10,7 +10,7 @@ import fr.emac.gipsi.gsi.gui.InterfaceCreationEcran;
  * @author Truptil Sebastien - sebastien.truptil@gmail.com
  *
  */
-public class LaunchCreationEcran {
+public class POoTP {
 
 	/**
 	 * @param args

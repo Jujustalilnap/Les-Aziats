@@ -1,6 +1,4 @@
 /**/
- *
- */
 package fr.emac.gipsi.gsi.voyageur;
 //On peut défnir une méthode qui est décrit par ses paramètres mais son action n'est pas explicite
 
@@ -28,7 +26,7 @@ public abstract class AbstractVoyageur {
 
     protected int energy = 0;
 
-    protected String direction = "S";
+    protected String direction = "E"; //E normalement
 
     /**
      *
@@ -38,7 +36,6 @@ public abstract class AbstractVoyageur {
 
     public void goForward() {
         energy = energy + 2;
-
         forward();
     }
 
@@ -133,8 +130,6 @@ public abstract class AbstractVoyageur {
      */
     public void setPosTete(Position posTete) {
         this.posTete = posTete;
-        this.posBody = new Position(posTete.getX(), posTete.getY() - 1);
-        System.out.println(posTete.toString() + " " + posBody.toString());
     }
 
 

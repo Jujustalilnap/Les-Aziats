@@ -30,8 +30,20 @@ public class LaunchAnimation {
 		AbstractAnimation ab = new AnimationFlash();
 		ab.setEcranDeb(ListScreen.second());
 		ab.setEcranFin(ListScreen.first());
+		ab.wait(1000);
 		
 		ab.runAnimation();
+		
+		AbstractAnimation ac = new AnimationFlash();
+		ac.setEcranDeb(ListScreen.second());
+		ac.setEcranFin(ListScreen.first());
+		ac.wait(1000);
+		
+		ac.runAnimation();
+		
+
+		
+
 
 	}
 

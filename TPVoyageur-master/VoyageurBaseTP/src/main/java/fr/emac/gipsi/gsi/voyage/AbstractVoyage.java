@@ -14,6 +14,7 @@ import fr.emac.gipsi.gsi.voyageur.AbstractVoyageur;
  * @author truptil
  *
  */
+
 public abstract class AbstractVoyage {
 
 	protected ArrayList<Planete> listPlanete = new ArrayList<Planete>();

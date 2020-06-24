@@ -24,22 +24,26 @@ public class VoyageurSimuler extends AbstractVoyageur {
         // TODO Auto-generated method stub
     	
     	String direction = getDirection();
-    	if (direction == "o") { //direction du robot ouest
+    	if (direction == "O") { //direction du robot ouest
     		getPosBody().setY(getPosBody().getY()-1);
     		getPosTete().setY(getPosTete().getY()-1);
+    		setDirection("O");
     	}
 
-    	else if (direction == "e") { //direction du robot est
-        		getPosBody().setY(getPosBody().getY()+1);
-        		getPosTete().setY(getPosTete().getY()+1);
+    	else if (direction == "E") { //direction du robot est
+        	getPosBody().setY(getPosBody().getY()+1);
+        	getPosTete().setY(getPosTete().getY()+1);
+        	setDirection("E");
         }
-    	else if (direction == "n") {
+    	else if (direction == "N") {
     		getPosBody().setX(getPosBody().getX()-1);
     		getPosTete().setX(getPosTete().getX()-1);
+    		setDirection("N");
     	}
     	else {
     		getPosBody().setX(getPosBody().getX()+1);
     		getPosTete().setX(getPosTete().getX()+1);
+    		setDirection("S");
     	}
     }
 
@@ -49,22 +53,26 @@ public class VoyageurSimuler extends AbstractVoyageur {
     @Override
     protected void backward() {
     	String direction = getDirection();
-    	if (direction == "o") { //direction du robot ouest
+    	if (direction == "O") { //direction du robot ouest
     		getPosBody().setY(getPosBody().getY()+1);
     		getPosTete().setY(getPosTete().getY()+1);
+    		setDirection("O");
     	}
 
-    	else if (direction == "e") { //direction du robot est
-        		getPosBody().setY(getPosBody().getY()-1);
-        		getPosTete().setY(getPosTete().getY()-1);
+    	else if (direction == "E") { //direction du robot est
+        	getPosBody().setY(getPosBody().getY()-1);
+        	getPosTete().setY(getPosTete().getY()-1);
+        	setDirection("E");
         }
-    	else if (direction == "n") {  //direction nord
+    	else if (direction == "N") {  //direction nord
     		getPosBody().setX(getPosBody().getX()+1);
     		getPosTete().setX(getPosTete().getX()+1);
+    		setDirection("N");
     	}
     	else {
     		getPosBody().setX(getPosBody().getX()-1); //sinon direction sud
     		getPosTete().setX(getPosTete().getX()-1);
+    		setDirection("S");
     	}
         // TODO Auto-generated method stub
     }
@@ -76,22 +84,26 @@ public class VoyageurSimuler extends AbstractVoyageur {
     protected void left() {
         // TODO Auto-generated method stub
     	String direction = getDirection();
-    	if (direction == "o") { //direction du robot ouest
+    	if (direction == "O") { //direction du robot ouest
     		getPosTete().setX(getPosTete().getX()+1);
     		getPosTete().setY(getPosTete().getY()+1);
+    		setDirection("S");
     	}
 
-    	else if (direction == "e") { //direction du robot est
-    			getPosTete().setX(getPosTete().getX()-1);
-        		getPosTete().setY(getPosTete().getY()-1);
+    	else if (direction == "E") { //direction du robot est
+    		getPosTete().setX(getPosTete().getX()-1);
+        	getPosTete().setY(getPosTete().getY()-1);
+        	setDirection("N");
         }
-    	else if (direction == "n") {  //direction nord
+    	else if (direction == "N") {  //direction nord
     		getPosTete().setX(getPosTete().getX()+1);
     		getPosTete().setY(getPosTete().getY()-1);
+    		setDirection("O");
     	}
     	else {
     		getPosTete().setY(getPosTete().getY()+1); //sinon direction sud
     		getPosTete().setX(getPosTete().getX()-1);
+    		setDirection("E");
     	}
     }
 
@@ -102,21 +114,26 @@ public class VoyageurSimuler extends AbstractVoyageur {
     protected void right() {
         // TODO Auto-generated method stub
     	String direction = getDirection();
-    	if (direction == "o") { //direction du robot ouest
+    	if (direction == "O") { //direction du robot ouest
     		getPosTete().setX(getPosTete().getX()-1);
     		getPosTete().setY(getPosTete().getY()+1);
+    		setDirection("N");
     	}
 
-    	else if (direction == "e") { //direction du robot est
-    			getPosTete().setX(getPosTete().getX()+1);
-        		getPosTete().setY(getPosTete().getY()-1);
-        }
-    	else if (direction == "n") {  //direction nord
+    	else if (direction == "E") { //direction du robot est
     		getPosTete().setX(getPosTete().getX()+1);
-    		getPosTete().setY(getPosTete().getY()-1);
+        	getPosTete().setY(getPosTete().getY()-1);
+        	setDirection("S");
+        }
+    	else if (direction == "N") {  //direction nord
+    		getPosTete().setX(getPosTete().getX()+1); //à changer le signe
+    		getPosTete().setY(getPosTete().getY()+1); 
+    		setDirection("E");
     	}
     	else {
     		getPosTete().setY(getPosTete().getY()-1); //sinon direction sud
     		getPosTete().setX(getPosTete().getX()-1);
+    		setDirection("O");
     	}
+    }
 }
