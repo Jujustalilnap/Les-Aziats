@@ -1541,7 +1541,7 @@ public ArrayList<Planete> OrdrePlaneteOptimale(Planete PlaneteInitial){
 	//int c = calcul_energy(TestFaux);
 	//System.out.println(c);
 	
-	while(compteur<6) {//while (NbreElemList.get(NbreElemList.size()-1)!=NbreElemList.get(NbreElemList.size()-2)) { // On regarde si la liste continue à s'étendre à créer d'autres chemins
+	while(compteur<150) {//while (NbreElemList.get(NbreElemList.size()-1)!=NbreElemList.get(NbreElemList.size()-2)) { // On regarde si la liste continue à s'étendre à créer d'autres chemins
 		//System.out.println(NbreElemList.get(NbreElemList.size()-1));
 		//System.out.println(NbreElemList.get(NbreElemList.size()-2));
 		//System.out.println(NbreElemList.get(NbreElemList.size()-1)!=NbreElemList.get(NbreElemList.size()-2));
@@ -1682,7 +1682,7 @@ public ArrayList<Planete> PlaneteAccessible(ArrayList<Planete> Ordreplanete){
 	//System.out.println(all_way);
 	int compteur = 0;
 	int decalage = 0;	
-	while(compteur<6) {//while (NbreElemList.get(NbreElemList.size()-1)!=NbreElemList.get(NbreElemList.size()-2)) { // On regarde si la liste continue à s'étendre à créer d'autres chemins
+	while(compteur<26) {//while (NbreElemList.get(NbreElemList.size()-1)!=NbreElemList.get(NbreElemList.size()-2)) { // On regarde si la liste continue à s'étendre à créer d'autres chemins
 		taille_all_way = all_way.size(); // On enregistre la taille de la liste all_way car elle sera modifié au cours des boucles for
 		//ListRemplaceSystem.out.println(all_way);.addAll(all_way.get(i)); // On créer une liste qui set une copie de all_way.get(ipour éviter toute modification sur cette dernière
 		ArrayList<ArrayList<Planete>> ListRemp = new ArrayList<ArrayList<Planete>>();
